@@ -17,6 +17,7 @@ else
   Plug 'mhinz/vim-signify', { 'branch': 'legacy' }
 endif
 
+Plug 'liuchengxu/vim-which-key'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'shumphrey/fugitive-gitlab.vim'
@@ -33,15 +34,18 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'peitalin/vim-jsx-typescript'
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'jparise/vim-graphql'
-
+Plug 'brooth/far.vim'
 Plug 'yuezk/vim-js'
 Plug 'HerringtonDarkholme/yats.vim'
-
+Plug 'tpope/vim-dotenv'
 Plug 'mbbill/undotree'
 Plug 'vim-test/vim-test'
-
-Plug 'francoiscabrol/ranger.vim'
+Plug 'liuchengxu/vim-which-key'
+"Plug 'francoiscabrol/ranger.vim'
+Plug 'kevinhwang91/rnvimr'
 Plug 'rbgrouleff/bclose.vim'
+
+Plug 'ntpeters/vim-better-whitespace'
 
 if isdirectory('/usr/local/opt/fzf')
     Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'

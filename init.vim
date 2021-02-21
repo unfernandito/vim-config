@@ -26,7 +26,8 @@ source $HOME/.config/nvim/plug-config/autocmd.vim
 source $HOME/.config/nvim/plug-config/grep.vim
 source $HOME/.config/nvim/plug-config/shortcuts.vim
 source $HOME/.config/nvim/plug-config/variables.vim
-
+source $HOME/.config/nvim/plug-config/far.vim
+source $HOME/.config/nvim/plug-config/rnvimr.vim
 
 source $HOME/.config/nvim/plug-config/settings.vim
 
