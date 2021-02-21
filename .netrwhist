@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =4
+let g:netrw_dirhist_4='/Users/luis.betancourt/Documents/ank/ank-bff-mobile/src/utils'
+let g:netrw_dirhist_3='/Users/luis.betancourt/Documents/ank/ank-bff-mobile/src'
+let g:netrw_dirhist_2='/Users/luis.betancourt/Documents/ank/ank-bff-mobile'
+let g:netrw_dirhist_1='/Users/luis.betancourt/.config/nvim'
