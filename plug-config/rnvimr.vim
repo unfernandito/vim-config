@@ -1,6 +1,7 @@
 " Make Ranger replace netrw and be the file explorer
-" let g:rnvimr_ex_enable = 1
+let g:rnvimr_ex_enable = 1
 
+let g:ranger_replace_netrw = 1 " open ranger when vim open a directory
 let g:rnvimr_draw_border = 1
 
 " Make Ranger to be hidden after picking a file

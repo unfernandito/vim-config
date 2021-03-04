@@ -120,4 +120,7 @@ endif
 set splitright
 set splitbelow
 
-let g:ranger_replace_netrw = 1 " open ranger when vim open a directory
+if has("persistent_undo")
+    set undodir=$HOME."/.undodir"
+    set undofile
+endif

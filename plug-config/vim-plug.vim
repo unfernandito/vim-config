@@ -22,10 +22,10 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'shumphrey/fugitive-gitlab.vim'
 Plug 'tpope/vim-rhubarb' " required by fugitive to :Gbrowse
-Plug 'vim-scripts/grep.vim'
+"Plug 'vim-scripts/grep.vim'
 Plug 'vim-scripts/CSApprox'
 Plug 'Raimondi/delimitMate'
-Plug 'majutsushi/tagbar'
+"Plug 'majutsushi/tagbar'
 Plug 'Yggdroot/indentLine'
 Plug 'editor-bootstrap/vim-bootstrap-updater'
 Plug 'ryanoasis/vim-devicons'
@@ -33,14 +33,13 @@ Plug 'joshdick/onedark.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'peitalin/vim-jsx-typescript'
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
-Plug 'jparise/vim-graphql'
+"Plug 'jparise/vim-graphql'
 Plug 'brooth/far.vim'
 Plug 'yuezk/vim-js'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'tpope/vim-dotenv'
 Plug 'mbbill/undotree'
 Plug 'vim-test/vim-test'
-Plug 'liuchengxu/vim-which-key'
 "Plug 'francoiscabrol/ranger.vim'
 Plug 'kevinhwang91/rnvimr'
 Plug 'rbgrouleff/bclose.vim'
@@ -95,6 +94,8 @@ Plug 'tpope/vim-surround'
 
 Plug 'justinmk/vim-sneak'
 Plug 'airblade/vim-rooter'
+
+Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
 "*****************************************************************************
 "*****************************************************************************
 
