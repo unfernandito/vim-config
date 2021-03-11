@@ -40,4 +40,3 @@ endif
 au TermEnter * setlocal scrolloff=0
 au TermLeave * setlocal scrolloff=3
 
-

@@ -1,6 +1,10 @@
 let g:coc_global_extensions = ['coc-emmet', 'coc-css', 'coc-html', 'coc-json', 'coc-tsserver']
 let g:coc_global_config="$HOME/.config/nvim/coc-settings.json"
 
+inoremap <expr> <TAB> pumvisible() ? "\<C-y>" : "\<TAB>"
+let g:coc_snippet_next = '<TAB>'
+let g:coc_snippet_prev = '<S-TAB>'
+
 if isdirectory('./node_modules') && isdirectory('./node_modules/prettier')
   let g:coc_global_extensions += ['coc-prettier']
   command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')
@@ -13,7 +17,7 @@ endif
 " cRemap keys for applying codeAction to the current line.
 nmap <leader>ac  <Plug>(coc-codeaction)
 " Apply AutoFix to problem on the current line.
-nmap <leader>fix  <Plug>(coc-fix-current)
+nmap <leader>nf  <Plug>(coc-fix-current)
 
 " GoTo code navigation.
 nmap <silent> gd <Plug>(coc-definition)

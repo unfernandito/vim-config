@@ -25,26 +25,23 @@ Plug 'tpope/vim-rhubarb' " required by fugitive to :Gbrowse
 "Plug 'vim-scripts/grep.vim'
 Plug 'vim-scripts/CSApprox'
 Plug 'Raimondi/delimitMate'
-"Plug 'majutsushi/tagbar'
+Plug 'majutsushi/tagbar'
 Plug 'Yggdroot/indentLine'
-Plug 'editor-bootstrap/vim-bootstrap-updater'
+""Plug 'editor-bootstrap/vim-bootstrap-updater'
 Plug 'ryanoasis/vim-devicons'
 Plug 'joshdick/onedark.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'peitalin/vim-jsx-typescript'
-Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
-"Plug 'jparise/vim-graphql'
 Plug 'brooth/far.vim'
-Plug 'yuezk/vim-js'
-Plug 'HerringtonDarkholme/yats.vim'
 Plug 'tpope/vim-dotenv'
 Plug 'mbbill/undotree'
 Plug 'vim-test/vim-test'
 "Plug 'francoiscabrol/ranger.vim'
 Plug 'kevinhwang91/rnvimr'
 Plug 'rbgrouleff/bclose.vim'
-
+Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'ntpeters/vim-better-whitespace'
+Plug 'thaerkh/vim-workspace'
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 
 if isdirectory('/usr/local/opt/fzf')
     Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
@@ -77,18 +74,20 @@ Plug 'honza/vim-snippets'
 "" HTML Bundle
 Plug 'hail2u/vim-css3-syntax'
 Plug 'gko/vim-coloresque'
-Plug 'tpope/vim-haml'
+""Plug 'tpope/vim-haml'
 Plug 'mattn/emmet-vim'
 
 
 " javascript
 "" Javascript Bundle
 Plug 'jelera/vim-javascript-syntax'
-
+Plug 'yuezk/vim-js'
+Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 
 " typescript
 Plug 'leafgarland/typescript-vim'
 Plug 'HerringtonDarkholme/yats.vim'
+Plug 'peitalin/vim-jsx-typescript'
 
 Plug 'tpope/vim-surround'
 

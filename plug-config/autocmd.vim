@@ -37,23 +37,25 @@ augroup END
 
 
 " Disable visualbell
+augroup vimrc-visualbell
 set noerrorbells visualbell t_vb=
 if has('autocmd')
   autocmd GUIEnter * set visualbell t_vb=
 endif
-
+augroup END
 
 " html
 " for html files, 2 spaces
+augroup vimrc-html
 autocmd Filetype html setlocal ts=2 sw=2 expandtab
-
+augroup END
 
 " vim-javascript
 augroup vimrc-javascript
   autocmd!
   autocmd FileType javascript setl tabstop=4|setl shiftwidth=4|setl expandtab softtabstop=4
+  " set filetypes as typescriptreact
+  autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescriptreact
 augroup END
 
-" set filetypes as typescriptreact
-autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescriptreact
 

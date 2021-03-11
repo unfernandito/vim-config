@@ -18,5 +18,6 @@
   "tsserver.formatOnType": true,
   "coc.preferences.formatOnType": true,
   "eslint.autoFixOnSave": true,
-  "prettier.disableSuccessMessage": true
+  "prettier.disableSuccessMessage": true,
+  "suggest.triggerAfterInsertEnter": true
 }

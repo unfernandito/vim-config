@@ -128,7 +128,7 @@ nnoremap <S-z> :UndotreeToggle<CR>
 nnoremap <S-f> /
 nnoremap <C-f> :Ag<CR>
 
-
+nnoremap <leader>s :ToggleWorkspace<CR>
 
 cnoremap <C-P> <C-R>=expand("%:p:h") . "/" <CR>
 nnoremap <silent> <leader>b :Buffers<CR>
