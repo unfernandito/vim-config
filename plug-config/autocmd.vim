@@ -58,4 +58,25 @@ augroup vimrc-javascript
   autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescriptreact
 augroup END
 
+function! s:IsFirenvimActive(event) abort
+  if !exists('*nvim_get_chan_info')
+    return 0
+  endif
+  let l:ui = nvim_get_chan_info(a:event.chan)
+  return has_key(l:ui, 'client') && has_key(l:ui.client, 'name') &&
+      \ l:ui.client.name =~? 'Firenvim'
+endfunction
 
+function! OnUIEnter(event) abort
+  if s:IsFirenvimActive(a:event)
+    set showtabline=0
+    set laststatus=0
+    set guifont=Iosevka\ Term:h14:r
+  endif
+endfunction
+
+augroup vimrc-firenvim
+    ""autocmd UIEnter * call OnUIEnter(deepcopy(v:event))
+    au BufEnter gitlab.com_*.txt set filetype=markdown
+    au BufEnter txti.es_*.txt set filetype=typescriptreact
+augroup END

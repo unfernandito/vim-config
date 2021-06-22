@@ -32,6 +32,7 @@ set hlsearch
 set incsearch
 set ignorecase
 set smartcase
+set lazyredraw
 
 set fileformats=unix,dos,mac
 
@@ -48,11 +49,11 @@ endif
 syntax on
 syntax enable
 set ruler
-set number
+"set number
 
 let no_buffers_menu=1
-colorscheme onedark 
-
+colorscheme one 
+set background=dark
 
 set mousemodel=popup
 set t_Co=256
@@ -121,6 +122,6 @@ set splitright
 set splitbelow
 
 if has("persistent_undo")
-    set undodir=$HOME."/.undodir"
-    set undofile
+"    set undodir=$HOME."/.undodir"
+""    set undofile
 endif

@@ -47,6 +47,7 @@ noremap <Leader>gs :Gstatus<CR>
 noremap <Leader>gb :Gblame<CR>
 noremap <Leader>gd :Gvdiff<CR>
 noremap <Leader>gr :Gremove<CR>
+nnoremap <silent><leader>l :Buffers<CR>
 
 " session management
 nnoremap <leader>so :OpenSession<Space>
@@ -126,7 +127,7 @@ nnoremap <D-z> :undo<CR>
 
 nnoremap <S-z> :UndotreeToggle<CR>
 nnoremap <S-f> /
-nnoremap <C-f> :Ag<CR>
+""nnoremap <C-f> :Ag<CR>
 
 nnoremap <leader>s :ToggleWorkspace<CR>
 
@@ -157,3 +158,10 @@ inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
 nnoremap <leader>p <C-\><C-n>:RnvimrToggle<CR>
 "nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
+
+
+" Find files using Telescope command-line sugar.
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <C-f> :Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>

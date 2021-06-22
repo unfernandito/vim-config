@@ -17,6 +17,10 @@ else
   Plug 'mhinz/vim-signify', { 'branch': 'legacy' }
 endif
 
+Plug 'nvim-lua/popup.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+
 Plug 'liuchengxu/vim-which-key'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
@@ -38,10 +42,11 @@ Plug 'vim-test/vim-test'
 "Plug 'francoiscabrol/ranger.vim'
 Plug 'kevinhwang91/rnvimr'
 Plug 'rbgrouleff/bclose.vim'
-Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+"Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'thaerkh/vim-workspace'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
+Plug 'rakr/vim-one'
 
 if isdirectory('/usr/local/opt/fzf')
     Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
@@ -59,12 +64,12 @@ endif
 Plug 'Shougo/vimproc.vim', {'do': g:make}
 
 "" Vim-Session
-Plug 'xolox/vim-misc'
-Plug 'xolox/vim-session'
+"Plug 'xolox/vim-misc'
+"Plug 'xolox/vim-session'
 
 "" Snippets
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
+"Plug 'SirVer/ultisnips'
+"Plug 'honza/vim-snippets'
 
 "*****************************************************************************
 "" Custom bundles
