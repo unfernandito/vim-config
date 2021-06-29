@@ -31,6 +31,7 @@ source $HOME/.config/nvim/plug-config/rnvimr.vim
 
 source $HOME/.config/nvim/plug-config/settings.vim
 
+
 "" Include user's local vim config
 if filereadable(expand("~/.config/nvim/local_init.vim"))
   source ~/.config/nvim/local_init.vim

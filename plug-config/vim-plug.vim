@@ -2,7 +2,6 @@
 if empty(glob('~/.config/nvim/autoload/plug.vim'))
   silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  "autocmd VimEnter * PlugInstall
   autocmd VimEnter * PlugInstall | source $MYVIMRC
 endif
 
@@ -26,12 +25,12 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'shumphrey/fugitive-gitlab.vim'
 Plug 'tpope/vim-rhubarb' " required by fugitive to :Gbrowse
-"Plug 'vim-scripts/grep.vim'
+
 Plug 'vim-scripts/CSApprox'
 Plug 'Raimondi/delimitMate'
 Plug 'majutsushi/tagbar'
 Plug 'Yggdroot/indentLine'
-""Plug 'editor-bootstrap/vim-bootstrap-updater'
+
 Plug 'ryanoasis/vim-devicons'
 Plug 'joshdick/onedark.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -39,10 +38,10 @@ Plug 'brooth/far.vim'
 Plug 'tpope/vim-dotenv'
 Plug 'mbbill/undotree'
 Plug 'vim-test/vim-test'
-"Plug 'francoiscabrol/ranger.vim'
+
 Plug 'kevinhwang91/rnvimr'
 Plug 'rbgrouleff/bclose.vim'
-"Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'thaerkh/vim-workspace'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
@@ -50,9 +49,11 @@ Plug 'rakr/vim-one'
 
 if isdirectory('/usr/local/opt/fzf')
     Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
+    Plug 'stsewd/fzf-checkout.vim'
 else
     Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
     Plug 'junegunn/fzf.vim'
+    Plug 'stsewd/fzf-checkout.vim'
 endif
 
 let g:make = 'gmake'
@@ -63,13 +64,6 @@ endif
 
 Plug 'Shougo/vimproc.vim', {'do': g:make}
 
-"" Vim-Session
-"Plug 'xolox/vim-misc'
-"Plug 'xolox/vim-session'
-
-"" Snippets
-"Plug 'SirVer/ultisnips'
-"Plug 'honza/vim-snippets'
 
 "*****************************************************************************
 "" Custom bundles
@@ -79,7 +73,6 @@ Plug 'Shougo/vimproc.vim', {'do': g:make}
 "" HTML Bundle
 Plug 'hail2u/vim-css3-syntax'
 Plug 'gko/vim-coloresque'
-""Plug 'tpope/vim-haml'
 Plug 'mattn/emmet-vim'
 
 
@@ -94,10 +87,11 @@ Plug 'leafgarland/typescript-vim'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'peitalin/vim-jsx-typescript'
 
+Plug 'easymotion/vim-easymotion'
 Plug 'tpope/vim-surround'
 
-Plug 'justinmk/vim-sneak'
 Plug 'airblade/vim-rooter'
+Plug 'wesQ3/vim-windowswap'
 
 Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
 "*****************************************************************************

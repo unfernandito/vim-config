@@ -1,7 +1,7 @@
 " let g:far#source='rgnvim'
-" let g:far#source='rg'
+let g:far#source='rg'
 " let g:far#source='vimgrep'
-let g:far#source='ag'
+" let g:far#source='ag'
 
 set lazyredraw            " improve scrolling performance when navigating through large results
 
