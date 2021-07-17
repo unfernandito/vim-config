@@ -125,11 +125,12 @@ nnoremap <C-h> :tabp<CR>
 nnoremap <C-n> :tabnew<CR>
 nnoremap <D-z> :undo<CR>
 
-nnoremap <S-z> :UndotreeToggle<CR>
 nnoremap <S-f> /
-""nnoremap <C-f> :Ag<CR>
+nnoremap <C-f> :Ag<CR>
 
-nnoremap <leader>s :ToggleWorkspace<CR>
+nnoremap <leader>p :NERDTreeToggle<CR>
+nnoremap <S-P> :NERDTreeFocus<CR>
+nnoremap <silent>fi :<C-u>Defx -new `expand('%:p:h')` -search=`expand('%:p')`<CR>
 
 cnoremap <C-P> <C-R>=expand("%:p:h") . "/" <CR>
 nnoremap <silent> <leader>b :Buffers<CR>
@@ -137,10 +138,6 @@ nnoremap <silent> <leader>e :FZF -m<CR>
 "Recovery commands from history through FZF
 nmap <leader>y :History:<CR>
 
-map f <Plug>Sneak_f
-" map F <Plug>Sneak_F
-map t <Plug>Sneak_t
-map T <Plug>Sneak_T
 
 map <C-s> :w<CR>
 
@@ -156,15 +153,6 @@ inoremap <silent><expr> <TAB>
       \ coc#refresh()
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
-nnoremap <leader>p <C-\><C-n>:RnvimrToggle<CR>
-"nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
-
-
-" Find files using Telescope command-line sugar.
-nnoremap <leader>ff <cmd>Telescope find_files<cr>
-nnoremap <C-f> :Telescope live_grep<cr>
-nnoremap <leader>fb <cmd>Telescope buffers<cr>
-nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
 
 " Far shortcuts

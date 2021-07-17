@@ -16,6 +16,12 @@ else
   Plug 'mhinz/vim-signify', { 'branch': 'legacy' }
 endif
 
+Plug 'nvim-lua/popup.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+
+Plug 'liuchengxu/vim-which-key'
+Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'shumphrey/fugitive-gitlab.vim'
 Plug 'tpope/vim-rhubarb' " required by fugitive to :Gbrowse
@@ -30,12 +36,17 @@ Plug 'joshdick/onedark.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'brooth/far.vim'
 Plug 'tpope/vim-dotenv'
+Plug 'mbbill/undotree'
+Plug 'vim-test/vim-test'
 
+Plug 'kevinhwang91/rnvimr'
 Plug 'rbgrouleff/bclose.vim'
 
 Plug 'ntpeters/vim-better-whitespace'
+Plug 'thaerkh/vim-workspace'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 Plug 'rakr/vim-one'
+Plug 'puremourning/vimspector'
 
 if isdirectory('/usr/local/opt/fzf')
     Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
@@ -53,16 +64,7 @@ endif
 
 
 Plug 'Shougo/vimproc.vim', {'do': g:make}
-if has('nvim')
-  Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
-else
-  Plug 'Shougo/defx.nvim'
-  Plug 'roxma/nvim-yarp'
-  Plug 'roxma/vim-hug-neovim-rpc'
-endif
 
-Plug 'preservim/nerdtree'
-Plug 'philrunninger/nerdtree-visual-selection'
 
 "*****************************************************************************
 "" Custom bundles
@@ -72,6 +74,8 @@ Plug 'philrunninger/nerdtree-visual-selection'
 "" HTML Bundle
 Plug 'hail2u/vim-css3-syntax'
 Plug 'gko/vim-coloresque'
+Plug 'mattn/emmet-vim'
+
 
 " javascript
 "" Javascript Bundle
@@ -90,6 +94,7 @@ Plug 'tpope/vim-surround'
 Plug 'airblade/vim-rooter'
 Plug 'wesQ3/vim-windowswap'
 
+Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
 "*****************************************************************************
 "*****************************************************************************
 

@@ -19,18 +19,15 @@ let g:vim_bootstrap_frams = ""
 
 source $HOME/.config/nvim/plug-config/vim-plug.vim
 source $HOME/.config/nvim/plug-config/airline.vim
-"" source $HOME/.config/nvim/plug-config/fzf.vim
+source $HOME/.config/nvim/plug-config/fzf.vim
 source $HOME/.config/nvim/plug-config/theme.vim
 source $HOME/.config/nvim/plug-config/coc.vim
 source $HOME/.config/nvim/plug-config/autocmd.vim
-"" source $HOME/.config/nvim/plug-config/grep.vim
 source $HOME/.config/nvim/plug-config/shortcuts.vim
 source $HOME/.config/nvim/plug-config/variables.vim
 "" source $HOME/.config/nvim/plug-config/far.vim
-source $HOME/.config/nvim/plug-config/rnvimr.vim
 
 source $HOME/.config/nvim/plug-config/settings.vim
-
 
 "" Include user's local vim config
 if filereadable(expand("~/.config/nvim/local_init.vim"))
