@@ -126,7 +126,7 @@ nnoremap <C-n> :tabnew<CR>
 nnoremap <D-z> :undo<CR>
 
 nnoremap <S-f> /
-nnoremap <C-f> :Ag<CR>
+nnoremap <C-f> :Rg<CR>
 nnoremap <leader>ff :Farf --source=agnvim<CR>
 nnoremap <leader>fr :Farr --source=agnvim<CR>
 nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
