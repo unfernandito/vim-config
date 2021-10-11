@@ -13,7 +13,7 @@ let g:far#enable_undo=1
 
 " let g:far#ignore_files=['$HOME/.config/nvim/utils/farignore']
 let g:far#ignore_files=['node_modules/', '.git/']
-
+let g:far#enable_undo=1
 "     Below are the default mappings and corresponding variable names in
 
 " x v_x   - Exclude item under the cursor.

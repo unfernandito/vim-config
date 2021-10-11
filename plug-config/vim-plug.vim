@@ -31,6 +31,8 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'brooth/far.vim'
 Plug 'tpope/vim-dotenv'
 
+Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
+
 Plug 'rbgrouleff/bclose.vim'
 
 Plug 'ntpeters/vim-better-whitespace'

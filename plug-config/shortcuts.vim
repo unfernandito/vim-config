@@ -127,8 +127,11 @@ nnoremap <D-z> :undo<CR>
 
 nnoremap <S-f> /
 nnoremap <C-f> :Ag<CR>
+nnoremap <leader>ff :Farf --source=agnvim<CR>
+nnoremap <leader>fr :Farr --source=agnvim<CR>
+nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
 
-nnoremap <leader>p :NERDTreeToggle<CR>
+nnoremap <leader>p :NERDTreeToggle %<CR>
 nnoremap <S-P> :NERDTreeFocus<CR>
 nnoremap <silent>fi :<C-u>Defx -new `expand('%:p:h')` -search=`expand('%:p')`<CR>
 
@@ -137,6 +140,7 @@ nnoremap <silent> <leader>b :Buffers<CR>
 nnoremap <silent> <leader>e :FZF -m<CR>
 "Recovery commands from history through FZF
 nmap <leader>y :History:<CR>
+nnoremap <leader>sb :GBranches<CR>
 
 
 map <C-s> :w<CR>
