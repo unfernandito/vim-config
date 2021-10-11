@@ -25,7 +25,7 @@ source $HOME/.config/nvim/plug-config/coc.vim
 source $HOME/.config/nvim/plug-config/autocmd.vim
 source $HOME/.config/nvim/plug-config/shortcuts.vim
 source $HOME/.config/nvim/plug-config/variables.vim
-"" source $HOME/.config/nvim/plug-config/far.vim
+source $HOME/.config/nvim/plug-config/denite.vim
 
 source $HOME/.config/nvim/plug-config/settings.vim
 

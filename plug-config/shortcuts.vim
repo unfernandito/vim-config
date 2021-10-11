@@ -163,3 +163,18 @@ inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
 " fzf.checkout
  nnoremap <S-b> :FZFGBranches<cr>
+
+ " DENITE
+map <C-F> :DeniteProjectDir -buffer-name=grep -default-action=quickfix grep:::!<CR>
+
+call denite#custom#source(
+\ 'grep', 'matchers', ['matcher_regexp'])
+
+" use ag for content search
+call denite#custom#var('grep', 'command', ['ag'])
+call denite#custom#var('grep', 'default_opts',
+    \ ['-i', '--vimgrep'])
+call denite#custom#var('grep', 'recursive_opts', [])
+call denite#custom#var('grep', 'pattern_opt', [])
+call denite#custom#var('grep', 'separator', ['--'])
+call denite#custom#var('grep', 'final_opts', [])

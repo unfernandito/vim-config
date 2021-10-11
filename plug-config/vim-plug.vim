@@ -53,6 +53,13 @@ if exists('make')
     let g:make = 'make'
 endif
 
+if has('nvim')
+  Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/denite.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
 
 Plug 'Shougo/vimproc.vim', {'do': g:make}
 if has('nvim')
