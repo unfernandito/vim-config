@@ -27,7 +27,7 @@ Plug 'Yggdroot/indentLine'
 
 Plug 'ryanoasis/vim-devicons'
 Plug 'joshdick/onedark.vim'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+"" Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'brooth/far.vim'
 Plug 'tpope/vim-dotenv'
 
@@ -38,6 +38,24 @@ Plug 'rbgrouleff/bclose.vim'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 Plug 'rakr/vim-one'
+
+" nvim-lsp
+" Improved syntax highlighting
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+ 
+" LSP configuration helpers
+Plug 'neovim/nvim-lspconfig'
+" Improved LSP interface
+Plug 'glepnir/lspsaga.nvim', { 'branch': 'main' }
+" Autocomplete menus
+
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/nvim-cmp'
+
+" Formatter integration
+Plug 'mhartington/formatter.nvim'
+" --------
 
 if isdirectory('/usr/local/opt/fzf')
     Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
@@ -102,6 +120,8 @@ endif
 
 
 call plug#end()
+
+lua require('lspconfig').tsserver.setup{}
 
 " Automatically install missing plugins on startup
 autocmd VimEnter *

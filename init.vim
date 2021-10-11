@@ -25,7 +25,11 @@ source $HOME/.config/nvim/plug-config/coc.vim
 source $HOME/.config/nvim/plug-config/autocmd.vim
 source $HOME/.config/nvim/plug-config/shortcuts.vim
 source $HOME/.config/nvim/plug-config/variables.vim
+source $HOME/.config/nvim/lua/config.vim
+
+
 "" source $HOME/.config/nvim/plug-config/far.vim
+
 
 source $HOME/.config/nvim/plug-config/settings.vim
 
@@ -34,6 +38,7 @@ if filereadable(expand("~/.config/nvim/local_init.vim"))
   source ~/.config/nvim/local_init.vim
 endif
 " END config files
+
 
 au TermEnter * setlocal scrolloff=0
 au TermLeave * setlocal scrolloff=3
