@@ -1,4 +1,6 @@
 plugged/**
+plugin/
 plugged
 ./plugged/
 init.vim_copy
+autoload/

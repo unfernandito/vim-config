@@ -48,6 +48,7 @@ noremap <Leader>gb :Gblame<CR>
 noremap <Leader>gd :Gvdiff<CR>
 noremap <Leader>gr :Gremove<CR>
 nnoremap <silent><leader>l :Buffers<CR>
+nnoremap <silent> gf mF:%!eslint_d --stdin --fix-to-stdout --stdin-filename %<CR>`F
 
 " session management
 nnoremap <leader>so :OpenSession<Space>

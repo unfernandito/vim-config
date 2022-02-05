@@ -35,6 +35,11 @@ augroup vimrc-make-cmake
     autocmd BufNewFile,BufRead CMakeLists.txt setlocal filetype=cmake
 augroup END
 
+augroup packer_auto_compile
+  autocmd!
+  autocmd BufWritePost */nvim/lua/plugins.lua source <afile> | PackerCompile
+augroup END
+
 
 " Disable visualbell
 augroup vimrc-visualbell
