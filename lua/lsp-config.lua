@@ -29,9 +29,6 @@ local on_attach = function(client, bufnr)
     buf_map(bufnr, "n", "ga", ":LspCodeAction<CR>")
     buf_map(bufnr, "n", "<Leader>a", ":LspDiagLine<CR>")
     buf_map(bufnr, "i", "<C-x><C-x>", "<cmd> LspSignatureHelp<CR>")
-    if client.resolved_capabilities.document_formatting then
-        vim.cmd("autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()")
-    end
 end
 
 lspconfig.tsserver.setup({
@@ -44,6 +41,13 @@ lspconfig.tsserver.setup({
         buf_map(bufnr, "n", "gs", ":TSLspOrganize<CR>")
         buf_map(bufnr, "n", "gi", ":TSLspRenameFile<CR>")
         buf_map(bufnr, "n", "go", ":TSLspImportAll<CR>")
+        if client.resolved_capabilities.document_formatting then
+            vim.cmd("autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()")
+            vim.api.nvim_command [[augroup Format]]
+            vim.api.nvim_command [[autocmd! * <buffer>]]
+            vim.api.nvim_command [[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_seq_sync()]]
+            vim.api.nvim_command [[augroup END]]
+        end
         on_attach(client, bufnr)
     end,
 })
@@ -57,7 +61,7 @@ null_ls.setup({
     on_attach = on_attach
 })
 
-require('lspconfig').yamlls.setup {
+lspconfig.yamlls.setup {
   settings = {
     yaml = {
       schemas = {
@@ -69,3 +73,5 @@ require('lspconfig').yamlls.setup {
     },
   }
 }
+
+

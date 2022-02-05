@@ -23,6 +23,7 @@ lua require('plugins')
 lua require("lsp-config")
 lua require("cmp-config")
 lua require("telescope-config")
+lua require("treesitter-config")
 
 source $HOME/.config/nvim/plug-config/airline.vim
 source $HOME/.config/nvim/plug-config/theme.vim
