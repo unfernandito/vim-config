@@ -42,16 +42,28 @@ return require('packer').startup(function()
     use 'ntpeters/vim-better-whitespace'
     use 'rakr/vim-one'
 
-    use 'junegunn/fzf'
-    use 'junegunn/fzf.vim'
-    use 'stsewd/fzf-checkout.vim'
+    use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
+    use {
+        'nvim-telescope/telescope.nvim',
+        requires = { {'nvim-lua/plenary.nvim'} }
+    }
+    use {
+        'windwp/nvim-spectre',
+        requires = { {'nvim-lua/plenary.nvim'} }
+    }
 
-    -- use 'Shougo/defx.nvim', { 'do': ':UpdateRemoteuseins' }
-
-    use 'preservim/nerdtree'
-    use 'philrunninger/nerdtree-visual-selection'
-
-
+    use {
+        "folke/trouble.nvim",
+        requires = "kyazdani42/nvim-web-devicons",
+        config = function()
+            require("trouble").setup {
+            -- your configuration comes here
+            -- or leave it empty to use the default settings
+            -- refer to the configuration section below
+            }
+        end
+    }    
+    
     use 'hail2u/vim-css3-syntax'
     use 'gko/vim-coloresque'
 

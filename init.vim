@@ -22,9 +22,9 @@ let g:vim_bootstrap_frams = ""
 lua require('plugins')
 lua require("lsp-config")
 lua require("cmp-config")
+lua require("telescope-config")
 
 source $HOME/.config/nvim/plug-config/airline.vim
-source $HOME/.config/nvim/plug-config/fzf.vim
 source $HOME/.config/nvim/plug-config/theme.vim
 source $HOME/.config/nvim/plug-config/autocmd.vim
 source $HOME/.config/nvim/plug-config/shortcuts.vim

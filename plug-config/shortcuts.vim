@@ -43,7 +43,6 @@ noremap <Leader>ga :Gwrite<CR>
 noremap <Leader>gc :Gcommit<CR>
 noremap <Leader>gsh :Gpush<CR>
 noremap <Leader>gll :Git pull<CR>
-noremap <Leader>gs :Gstatus<CR>
 noremap <Leader>gb :Gblame<CR>
 noremap <Leader>gd :Gvdiff<CR>
 noremap <Leader>gr :Gremove<CR>
@@ -126,22 +125,27 @@ nnoremap <C-h> :tabp<CR>
 nnoremap <C-n> :tabnew<CR>
 nnoremap <D-z> :undo<CR>
 
-nnoremap <S-f> /
-nnoremap <C-f> :Rg<CR>
+nnoremap <S-f> <cmd>lua require('telescope.builtin').current_buffer_fuzzy_find()<cr>
+nnoremap <C-f> <cmd>lua require('telescope.builtin').live_grep()<cr>
 nnoremap <leader>ff :Farf --source=agnvim<CR>
 nnoremap <leader>fr :Farr --source=agnvim<CR>
 nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
 
-nnoremap <leader>p :NERDTreeToggle %<CR>
-nnoremap <S-P> :NERDTreeFocus<CR>
+
 nnoremap <silent>fi :<C-u>Defx -new `expand('%:p:h')` -search=`expand('%:p')`<CR>
 
-cnoremap <C-P> <C-R>=expand("%:p:h") . "/" <CR>
-nnoremap <silent> <leader>b :Buffers<CR>
-nnoremap <silent> <leader>e :FZF -m<CR>
+nnoremap <C-P> <cmd>lua require('telescope.builtin').git_files()<cr>
+nnoremap <silent> <leader>b <cmd>lua require('telescope.builtin').buffers()<cr>
+
 "Recovery commands from history through FZF
 nmap <leader>y :History:<CR>
-nnoremap <leader>sb :GBranches<CR>
+nnoremap <leader>sb <cmd>lua require('telescope.builtin').git_branches()<cr>
+nnoremap <leader>gs <cmd>lua require('telescope.builtin').git_status()<cr>
+"search current word
+nnoremap <leader>sw <cmd>lua require('spectre').open_visual({select_word=true})<CR>
+vnoremap <leader>sf <cmd>lua require('spectre').open_visual()<CR>
+"  search in current file
+nnoremap <leader>sp viw:lua require('spectre').open_file_search()<cr>
 
 
 map <C-s> :w<CR>
@@ -151,16 +155,4 @@ function! s:check_back_space() abort
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 
-" Use tab for trigger completion with characters ahead and navigate.
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
-
-
-" Far shortcuts
-
-" fzf.checkout
- nnoremap <S-b> :FZFGBranches<cr>
