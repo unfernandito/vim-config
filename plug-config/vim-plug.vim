@@ -39,6 +39,10 @@ Plug 'ntpeters/vim-better-whitespace'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 Plug 'rakr/vim-one'
 
+"" Golang
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+
+
 if isdirectory('/usr/local/opt/fzf')
     Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
     Plug 'stsewd/fzf-checkout.vim'
