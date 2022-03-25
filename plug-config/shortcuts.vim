@@ -47,7 +47,8 @@ noremap <Leader>gb :Gblame<CR>
 noremap <Leader>gd :Gvdiff<CR>
 noremap <Leader>gr :Gremove<CR>
 nnoremap <silent><leader>l :Buffers<CR>
-nnoremap <silent> gf mF:%!eslint_d --stdin --fix-to-stdout --stdin-filename %<CR>`F
+nnoremap <silent>gf mF:%!eslint_d --stdin --fix-to-stdout --stdin-filename %<CR>`F
+noremap <silent>gf mF:%!eslint_d --stdin --fix-to-stdout --stdin-filename %<CR>`F
 
 " session management
 nnoremap <leader>so :OpenSession<Space>
@@ -132,7 +133,12 @@ nnoremap <leader>fr :Farr --source=agnvim<CR>
 nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
 
 
-nnoremap <silent>fi :<C-u>Defx -new `expand('%:p:h')` -search=`expand('%:p')`<CR>
+nnoremap <leader>xx <cmd>TroubleToggle<cr>
+nnoremap <leader>xw <cmd>TroubleToggle workspace_diagnostics<cr>
+nnoremap <leader>xd <cmd>TroubleToggle document_diagnostics<cr>
+nnoremap <leader>xq <cmd>TroubleToggle quickfix<cr>
+nnoremap <leader>fi <cmd>TroubleToggle loclist<cr>
+nnoremap gR <cmd>TroubleToggle lsp_references<cr>
 
 nnoremap <C-P> <cmd>lua require('telescope.builtin').git_files()<cr>
 nnoremap <silent> <leader>b <cmd>lua require('telescope.builtin').buffers()<cr>
@@ -147,6 +153,13 @@ vnoremap <leader>sf <cmd>lua require('spectre').open_visual()<CR>
 "  search in current file
 nnoremap <leader>sp viw:lua require('spectre').open_file_search()<cr>
 
+nnoremap <leader>p :NvimTreeToggle<CR>
+nnoremap <leader>r :NvimTreeRefresh<CR>
+nnoremap <leader>n :NvimTreeFindFile<CR>
+
+nnoremap <C-t> :ToggleTerm<CR>
+nnoremap <silent><c-t> <Cmd>exe v:count1 . "ToggleTerm"<CR>
+inoremap <silent><c-t> <Esc><Cmd>exe v:count1 . "ToggleTerm"<CR>
 
 map <C-s> :w<CR>
 

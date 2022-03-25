@@ -4,8 +4,9 @@ return require('packer').startup(function()
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
 
-    use 'vim-airline/vim-airline'
-    use 'vim-airline/vim-airline-themes'
+    --use 'vim-airline/vim-airline'
+    --use 'vim-airline/vim-airline-themes'
+    use 'beauwilliams/statusline.lua'
 
     use 'mhinz/vim-signify'
 
@@ -19,12 +20,28 @@ return require('packer').startup(function()
     use 'Yggdroot/indentLine'
 
     use 'ryanoasis/vim-devicons'
-    use 'joshdick/onedark.vim'
+    use 'folke/tokyonight.nvim'
+    use {
+        'romgrk/barbar.nvim',
+        requires = {'kyazdani42/nvim-web-devicons'}
+    }
+
+    use 'rmagatti/auto-session'
 
     use 'nvim-lua/plenary.nvim'
+    use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
     use 'neovim/nvim-lspconfig'
     use 'jose-elias-alvarez/null-ls.nvim'
     use 'jose-elias-alvarez/nvim-lsp-ts-utils'
+    use 'folke/lsp-colors.nvim'
+    use {
+        "folke/trouble.nvim",
+        requires = "kyazdani42/nvim-web-devicons",
+        config = function()
+            require("trouble").setup {
+            }
+        end
+    }
 
     use {
         'nvim-treesitter/nvim-treesitter',
@@ -45,7 +62,11 @@ return require('packer').startup(function()
     use 'rbgrouleff/bclose.vim'
 
     use 'ntpeters/vim-better-whitespace'
-    use 'rakr/vim-one'
+
+    use {
+        'kyazdani42/nvim-tree.lua',
+        requires = { {'kyazdani42/nvim-web-devicons'} }
+    }
 
     use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
     use {
@@ -56,33 +77,21 @@ return require('packer').startup(function()
         'windwp/nvim-spectre',
         requires = { {'nvim-lua/plenary.nvim'} }
     }
-
-    use {
-        "folke/trouble.nvim",
-        requires = "kyazdani42/nvim-web-devicons",
-        config = function()
-            require("trouble").setup {
-            -- your configuration comes here
-            -- or leave it empty to use the default settings
-            -- refer to the configuration section below
-            }
-        end
-    }    
-    
-    use 'hail2u/vim-css3-syntax'
+    -- use 'hail2u/vim-css3-syntax'
     use 'gko/vim-coloresque'
 
-    use 'jelera/vim-javascript-syntax'
-    use 'yuezk/vim-js'
-    use 'styled-components/vim-styled-components'
+    -- use 'jelera/vim-javascript-syntax'
+    -- use 'yuezk/vim-js'
+    -- use 'styled-components/vim-styled-components'
 
-    use 'leafgarland/typescript-vim'
-    use 'HerringtonDarkholme/yats.vim'
-    use 'peitalin/vim-jsx-typescript'
-
-    use 'easymotion/vim-easymotion'
-    use 'tpope/vim-surround'
+    -- use 'leafgarland/typescript-vim'
+    -- use 'HerringtonDarkholme/yats.vim'
+    -- use 'peitalin/vim-jsx-typescript'
 
     use 'airblade/vim-rooter'
     use 'wesQ3/vim-windowswap'
+
+    use 'akinsho/toggleterm.nvim'
+    use 'hrsh7th/vim-vsnip'
+    use 'hrsh7th/vim-vsnip-integ'
 end)

@@ -3,8 +3,6 @@
 "" Vim-Plug core
 "*****************************************************************************
 
-
-" let vimplug_exists=expand('~/.config/nvim/autoload/plug.vim')
 if has('win32')&&!has('win64')
     let curl_exists=expand('C:\Windows\Sysnative\curl.exe')
 else
@@ -13,24 +11,22 @@ end
 
 let g:vim_bootstrap_langs = "html,javascript,typescript"
 let g:vim_bootstrap_editor = "nvim"				" nvim or vim
-let g:vim_bootstrap_theme = "darkone"
-let g:vim_bootstrap_frams = ""
 
-" My config files
-"
 
 lua require('plugins')
 lua require("lsp-config")
 lua require("cmp-config")
 lua require("telescope-config")
 lua require("treesitter-config")
+lua require("toggleterm-config")
+lua require("statusline-config")
+lua require("diffview-config")
+lua require("auto-session-config")
 
-source $HOME/.config/nvim/plug-config/airline.vim
 source $HOME/.config/nvim/plug-config/theme.vim
 source $HOME/.config/nvim/plug-config/autocmd.vim
 source $HOME/.config/nvim/plug-config/shortcuts.vim
 source $HOME/.config/nvim/plug-config/variables.vim
-"" source $HOME/.config/nvim/plug-config/far.vim
 
 source $HOME/.config/nvim/plug-config/settings.vim
 
@@ -39,7 +35,6 @@ if filereadable(expand("~/.config/nvim/local_init.vim"))
   source ~/.config/nvim/local_init.vim
 endif
 " END config files
-
 
 au TermEnter * setlocal scrolloff=0
 au TermLeave * setlocal scrolloff=3
