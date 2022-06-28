@@ -1,6 +1,6 @@
 require("toggleterm").setup{
     size = 80,
-    direction = 'vertical'
+    direction = 'tab'
 }
 
 function _G.set_terminal_keymaps()
